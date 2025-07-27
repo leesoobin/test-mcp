@@ -1,0 +1,21 @@
+{
+  "name": "mcp-weather-server",
+  "version": "1.0.0",
+  "description": "FastAPI MCP Server with weather tools",
+  "main": "index.js",
+  "module": "./index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "keywords": ["mcp", "fastapi", "weather"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
+  }
+} 

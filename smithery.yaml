@@ -1,39 +1,22 @@
 name: mcp-weather-server
 description: FastAPI MCP Server with weather tools
 
-# Docker 이미지 빌드 설정
 build:
   dockerfile: Dockerfile
   context: .
 
-# 서비스 설정
 service:
   type: web
   port: 8081
-  healthcheck:
-    path: /
-    interval: 30s
-    timeout: 10s
-    retries: 3
 
-# 환경 변수 (필요시 추가)
 env:
   - name: PYTHONUNBUFFERED
     value: "1"
 
-# 리소스 설정
 resources:
   cpu: 0.5
   memory: 512Mi
 
-# 스케일링 설정
 scaling:
   min_replicas: 1
-  max_replicas: 3
-
-# 네트워크 설정
-network:
-  ingress:
-    enabled: true
-    annotations:
-      nginx.ingress.kubernetes.io/rewrite-target: / 
+  max_replicas: 3 
